@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shape">
+      <UniqueIdentifier>{97de974e-f18a-4913-89fb-8c96b3a5def5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blank">
+      <UniqueIdentifier>{c3073d2b-bbaf-4c96-847f-901081460976}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Shape.h">
+      <Filter>Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="block1.h">
+      <Filter>Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="CConsoleMenu.h">
+      <Filter>Blank</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>Blank</Filter>
+    </ClInclude>
+    <ClInclude Include="Tetris.h">
+      <Filter>Blank</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Blank</Filter>
+    </ClInclude>
+    <ClInclude Include="block2.h">
+      <Filter>Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="block3.h">
+      <Filter>Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="block4.h">
+      <Filter>Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="block5.h">
+      <Filter>Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="block6.h">
+      <Filter>Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="block7.h">
+      <Filter>Shape</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="block1.cpp">
+      <Filter>Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="Tetris.cpp">
+      <Filter>Blank</Filter>
+    </ClCompile>
+    <ClCompile Include="CConsoleMenu.cpp">
+      <Filter>Blank</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>Blank</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Blank</Filter>
+    </ClCompile>
+    <ClCompile Include="block2.cpp">
+      <Filter>Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="block4.cpp">
+      <Filter>Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="block3.cpp">
+      <Filter>Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="block5.cpp">
+      <Filter>Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="block6.cpp">
+      <Filter>Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="block7.cpp">
+      <Filter>Shape</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
