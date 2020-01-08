@@ -112,14 +112,12 @@ int **NEXT()
 	}
 	return NextB;
 }
-
+Tetris::Tetris() {
+	nFrame = 20, nSpeed = 50, nLevel = 1, nScore = 0, nstage = 1, playernumber = 1;
+}
 
 
 //////////////////////////////
-Tetris::Tetris() {
-	nFrame = 20, nSpeed = 50, nLevel = 1, nstage = 1, nScore = 0, playernumber = 1;
-}
-
 Tetris::Tetris(int frame, int speed, int level, int score, int stage, int number) {
 	nFrame = frame, nSpeed = speed, nLevel = level, nstage = stage, nScore = score, playernumber = number; 
 }
@@ -172,17 +170,18 @@ void Tetris::StartGame() {
 	int varx = 10, token = 1, cnt = 0, limit = 1;
 	int nFrame = 20, nSpeed = 50, nLevel = 1, nstage = 1, nScore = 0;
 	if (playernumber == 1) {
-		InsertPlayernumber();
 		cin >> nNumber;
 		Gostagelevel();
 		cin >> nstage;
 		cin >> nLevel;
+		/*
 		if (nNumber >= 2) {
 			nNumber = 2;
 			Tetris P2(nFrame, nSpeed, nLevel, 0, nstage, 2);
 			thread t(&Tetris::StartGame, &P2);
 			t.join();
 		}
+		*/
 	}
 	if (!(nstage >= 1 && nstage <= 3)) nstage = 1;
 	if (!(nLevel >= 1 && nLevel <= 5)) nLevel = 1;
@@ -326,35 +325,6 @@ void Tetris::StartGame() {
 		cout << "Game Over!!" << endl;
 		system("pause");
 	}
-}
-// 플레이어 수를 입력하라는 함수
-void Tetris::InsertPlayernumber() {
-	const int nBlank = 10;
-	string strDescription = " 플레이할 인원수를 입력해주세요. 최대 2인으로 그 이상을 입력하셔도 2로 처리됩니다.";
-	int i, nChoice, nMaxLength = strDescription.length();
-	int stage, level;
-	system("cls");
-	for (i = 0; i < nMaxLength + nBlank; i++) {
-		cout << "=";
-	}
-	cout << endl;
-	for (i = 0; i < (nMaxLength + nBlank - strDescription.length()) / 2; i++) {
-		cout << " ";
-	}
-	cout << strDescription[0] << endl;
-	for (i = 0; i < nMaxLength + nBlank; i++) {
-		cout << "=";
-	}
-	d.gotoPrint(5, 2, strDescription);
-	cout << endl;
-	for (i = 0; i < nMaxLength + nBlank; i++) {
-		cout << "=";
-	}
-	cout << endl;
-	for (i = 0; i < nMaxLength + nBlank; i++) {
-		cout << "=";
-	}
-	d.gotoPrint(5, 6, ">> ");
 }
 // 스테이지와 레벨을 선택하라는 함수
 void Tetris::Gostagelevel() {

@@ -60,7 +60,7 @@ public:
 	void setnStage(int);
 
 	
-	void InsertPlayernumber();			// 플레이어 수 입력
+	//void InsertPlayernumber();			// 플레이어 수 입력
 	void StartGame();					// 게임 시작
 	void Run();							// 실행 ( 콘솔메뉴보여주기 )
 	int HowToPlay();					// 플레이 방법

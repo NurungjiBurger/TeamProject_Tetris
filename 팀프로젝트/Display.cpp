@@ -27,6 +27,23 @@ void Display::DrawBoard() {
 		printf("\n");
 	}
 	gotoPrint(24, 1, "←Dead Line");
+
+	for (i = 0; i < GetHeight() + 2; i++) {
+		for (j = 46; j < 46+GetWidth() + 2; j++) {
+			if (i == GetHeight() + 1) {
+				cout << "▣";
+				continue;
+			}
+			if (j == 0 || j == GetWidth() + 1) {
+				cout << "▣";
+			}
+			else {
+				cout << "  ";
+			}
+		}
+		printf("\n");
+	}
+	gotoPrint(70, 1, "←Dead Line");
 }
 // 좌표 x,y로 이동
 void Display::gotoxy(int x,int y) {
@@ -50,6 +67,19 @@ void Display::ShowNextBlock(int **b) {
 	gotoPrint(30, 7, "□        □");
 	gotoPrint(30, 8, "□□□□□□");
 	NextBlock.Draw(true);
+
+	NextBlock.ChangeB(b);
+	// 다음블럭이 표시 되어야 할 좌표를 등록
+	NextBlock.SetCen_X(76);
+	NextBlock.SetCen_Y(4);
+	//NextBlock.SetShape(next_type);
+	gotoPrint(76, 3, "□□□□□□");
+	gotoPrint(76, 4, "□        □");
+	gotoPrint(76, 5, "□        □");
+	gotoPrint(76, 6, "□        □");
+	gotoPrint(76, 7, "□        □");
+	gotoPrint(76, 8, "□□□□□□");
+	NextBlock.Draw(true);
 }
 // 게임정보 출력
 void Display::ShowGameInfo(int stage, int level, int score) {
@@ -58,6 +88,13 @@ void Display::ShowGameInfo(int stage, int level, int score) {
 	gotoPrint(30, 12, "Level : ");
 	cout << level;
 	gotoPrint(30, 14, "Score : ");
+	cout << score;
+
+	gotoPrint(76, 10, "Stage : ");
+	cout << stage;
+	gotoPrint(76, 12, "Level : ");
+	cout << level;
+	gotoPrint(76, 14, "Score : ");
 	cout << score;
 }
 // 좌표 x,y로 이동 후 str 출력
