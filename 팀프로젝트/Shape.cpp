@@ -40,14 +40,14 @@ bool Shape::isValidBlock(int direction) {
 		for (j = 0; j < 4; j++) {
 			if (m_nBlock[i][j] == 1) {
 				switch (direction) {
-				case DOWN:if (!(cen_y + i < d.GetHeight()) || Board[cen_y + i][(cen_x + 2 * j) / 2 - 1] == 1) { return false; } break;
-				case LEFT:
+				case P2DOWN:if (!(cen_y + i < d.GetHeight()) || Board[cen_y + i][(cen_x + 2 * j) / 2 - 1] == 1) { return false; } break;
+				case P2LEFT:
 					if (!(cen_x + 2 * j > 2) || Board[cen_y + i - 1][(cen_x + 2 * j) / 2 - 2] == 1)
 					{
 						return false;
 					}
 					break;
-				case RIGHT:if (!(cen_x + 2 * j < 2 * d.GetWidth()) || Board[cen_y + i - 1][(cen_x + 2 * j) / 2] == 1) { return false; } break;
+				case P2RIGHT:if (!(cen_x + 2 * j < 2 * d.GetWidth()) || Board[cen_y + i - 1][(cen_x + 2 * j) / 2] == 1) { return false; } break;
 				}
 			}
 		}

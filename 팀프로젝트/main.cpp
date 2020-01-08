@@ -1,6 +1,8 @@
 #include "main.h"
 #include "CConsoleMenu.h"
 #include "Tetris.h"
+#include <thread>
+using std::thread;
 using namespace std;
 
 /*
@@ -21,11 +23,22 @@ bool CheckEnd();
 
 
 int main() {
-	Tetris t;
+	/*
+	int key;
+	key = _getch();
+
+	if (key == 224) key = _getch();
+	printf("%d", key);
+	return 0;
+	*/
+	
+	Tetris P1;
 	srand((unsigned)time(NULL));
 	SetCursorVisible(false);
-	t.Run();
+	thread t(&Tetris::Run, &P1);
+	t.join();
 	return 0;
+	
 }
 
 // 커서 지우기

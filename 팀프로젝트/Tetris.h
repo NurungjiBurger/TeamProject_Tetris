@@ -25,6 +25,8 @@ private:
 	int nLevel;						// 게임 단계
 	int nScore;						// 점수
 	int nstage;						// 게임 스테이지
+	int nNumber;					// 플레이어 수
+	int playernumber;				// 플레이어의 번호
 
 	// 테트리스 클래스에서 사용될 오브젝트들
 	Display d;
@@ -43,8 +45,22 @@ private:
 public:
 	// 생, 소멸자
 	Tetris();
+	Tetris(int, int, int, int, int, int);
 	~Tetris();
 
+	int getnFrame();					// 2p와 1p의 초기설정을 같도록 해주기위한
+	int getnSpeed();					// get 메소드들
+	int getnLevel();
+	int getnStage();
+	int getnNumber();
+
+	void setnFrame(int);					// 2p와 1p의 초기설정을 같도록 해주기위한
+	void setnSpeed(int);					// set 메소드들
+	void setnLevel(int);
+	void setnStage(int);
+
+	
+	void InsertPlayernumber();			// 플레이어 수 입력
 	void StartGame();					// 게임 시작
 	void Run();							// 실행 ( 콘솔메뉴보여주기 )
 	int HowToPlay();					// 플레이 방법
